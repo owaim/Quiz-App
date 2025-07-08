@@ -98,7 +98,7 @@ function saveAns(event) {
     document.querySelectorAll("#opt").forEach(opt => {
         opt.classList.remove("selected-opt")
     });
-    event.target.parentNode.classList.add("selected-opt")
+    event.currentTarget.classList.add("selected-opt")
 
     let selectedRadio = document.querySelector('input[type="radio"]:checked')
     if (selectedRadio) {
