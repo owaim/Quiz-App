@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="quiz-app">
+            <div class="quiz-header">
+                <h1>Quiz App</h1>
+                <p>Test your knowledge with our quiz!</p>
+            </div>
+            <div class="Ques-counter-box">
+                <p class="ques-tracker">Questions: <span id="ques-counter">1</span>/10</p>
+                <p class="timer">Timer: <span id="minute"></span><span id="colon"></span><span id="second">0</span> sec</p>
+
+            </div>
+            <div class="quiz-ques">
+
+                <h2 id="quiz-ques-text"></h2>
+
+            </div>
+
+            <div id="option-container">
+
+            </div>
+
+            <div id="quiz-btns">
+                <button id="prev-btn" onclick="prevQues()" class="btn">Previous</button>
+                <button id="next-btn" onclick="nextQues()" class="btn">Next</button>
+                <button id="result-btn" onclick="result()" class="btn">Result</button>
+            </div>
+        </div>
+        <div id="result-container">
+            <div class="result-box">
+                <canvas id="canvas"></canvas>
+                <h2 class="result-header">Quiz Completed!</h2>
+                <p class="result-text">Your score is:</p>
+                <div class="circular-chart">
+                    <svg viewBox="0 0 36 36" class="circle">
+                        <path class="circle-bg"
+                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path id="circle-progress" class="circle-progress" stroke-dasharray="0, 100"
+                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    </svg>
+                    <div class="score-overlay" id="circle-score">0/100</div>
+                </div>
+
+                <div class="result-summary">
+
+                    <div class="summary-box light">
+                        <p>Questions Attempted</p>
+                        <h3 id="total-ques">10</h3>
+                    </div>
+                    <div class="summary-box dark">
+                        <p>Correct Answers</p>
+                        <h3 id="correct-ans">0</h3>
+                    </div>
+                </div>
+
+                <button id="restart-btn" class="btn" onclick="restartQuiz()">Restart Quiz</button>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="script.js"></script>
+
+</html>
